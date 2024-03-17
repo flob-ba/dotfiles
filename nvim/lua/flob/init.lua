@@ -105,9 +105,13 @@ cmp.setup({
         name = "buffer",
     }),
     mapping = {
-        ["<Enter>"] = cmp.mapping.confirm({ select = false }),
+        ["<Enter>"] = cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Replace, select = true }),
+        ["<Tab>"] = cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Replace, select = true }),
     },
     view = { entries = "custom" },
+    experimental = {
+        ghost_text = true,
+    },
 })
 
 vim.g.UltiSnipsSnippetDirectories = {"UltiSnips", "my_snippets"}
