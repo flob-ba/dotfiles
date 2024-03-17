@@ -107,6 +107,7 @@ cmp.setup({
     mapping = {
         ["<Enter>"] = cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Replace, select = true }),
         ["<Tab>"] = cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Replace, select = true }),
+        ["<Escape>"] = cmp.mapping.close();
     },
     view = { entries = "custom" },
     experimental = {
