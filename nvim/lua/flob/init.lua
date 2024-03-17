@@ -106,7 +106,6 @@ cmp.setup({
     }),
     mapping = {
         ["<Enter>"] = cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Replace, select = true }),
-        ["<Tab>"] = cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Replace, select = true }),
         ["<Escape>"] = cmp.mapping.close();
     },
     view = { entries = "custom" },
@@ -163,6 +162,8 @@ lspconfig.texlab.setup({
         }
     }
 })
+
+vim.keymap.set("n", "<leader>ow", vim.diagnostic.open_float)
 
 require("overseer").setup({})
 
