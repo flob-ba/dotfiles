@@ -21,6 +21,18 @@ vim.cmd("set splitright")
 
 vim.keymap.set("n", "<leader>wh", vim.cmd.new)
 vim.keymap.set("n", "<leader>wv", vim.cmd.vne)
+vim.keymap.set("n", "<leader><left>", function()
+    vim.cmd("wincmd h")
+end)
+vim.keymap.set("n", "<leader><down>", function()
+    vim.cmd("wincmd j")
+end)
+vim.keymap.set("n", "<leader><up>", function()
+    vim.cmd("wincmd k")
+end)
+vim.keymap.set("n", "<leader><right>", function()
+    vim.cmd("wincmd l")
+end)
 
 vim.opt.termguicolors = true
 
@@ -106,7 +118,6 @@ cmp.setup({
     }),
     mapping = {
         ["<Enter>"] = cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Replace, select = true }),
-        ["<Escape>"] = cmp.mapping.close();
     },
     view = { entries = "custom" },
     experimental = {
