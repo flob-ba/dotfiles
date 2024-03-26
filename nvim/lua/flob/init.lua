@@ -50,6 +50,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("flob.plugins")
+vim.cmd("highlight link @lsp.type.property.c cParen")
+vim.cmd("highlight link @lsp.type.class.c GruvboxYellow")
+vim.cmd("highlight link cTypedef GruvboxOrange")
 
 require("toggleterm").setup({
     open_mapping = [[<C-t>]],
