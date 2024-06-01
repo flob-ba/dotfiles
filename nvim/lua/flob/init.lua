@@ -55,6 +55,8 @@ vim.cmd("highlight link @lsp.type.class.c GruvboxYellow")
 vim.cmd("highlight link @lsp.type.class.cpp GruvboxYellow")
 vim.cmd("highlight link @lsp.type.enum.cpp GruvboxYellow")
 vim.cmd("highlight link cTypedef GruvboxOrange")
+vim.cmd("highlight link cppStructure GruvboxOrange")
+vim.cmd("highlight link @lsp.type.namespace.cpp GruvboxYellow")
 
 require("toggleterm").setup({
     open_mapping = [[<C-t>]],
