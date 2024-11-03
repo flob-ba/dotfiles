@@ -18,7 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("flob.plugins")
 
 -- colorscheme
-vim.cmd("highlight Normal guibg=#1a1220") -- override gui background color
+vim.cmd("highlight Normal guibg=#101010") -- override gui background color
 vim.cmd("highlight link @lsp.type.property.c cParen")
 vim.cmd("highlight link @lsp.type.class.c GruvboxYellow")
 vim.cmd("highlight link @lsp.type.class.cpp GruvboxYellow")
