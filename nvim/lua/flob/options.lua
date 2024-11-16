@@ -19,6 +19,9 @@ opt.whichwrap:append {
     ["]"] = true,
 }
 
+-- Do not break lines visually
+opt.wrap = false
+
 -- Specify where new buffers should appear
 opt.splitbelow = true
 opt.splitright = true
