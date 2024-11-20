@@ -1,5 +1,5 @@
-print("Hello!")
+print("I use Neovim, btw!")
 
-require("flob.options")
-require("flob.keymaps")
-require("flob.lazy")
+require("config.keymaps")
+require("config.options")
+require("config.lazy")
