@@ -18,3 +18,5 @@ vim.opt.whichwrap:append {
 }
 
 vim.g.c_syntax_for_h = true 
+
+vim.opt.termguicolors = true
