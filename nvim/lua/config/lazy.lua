@@ -17,7 +17,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Load plugins
 require("lazy").setup("config.plugins")
-
+require("pywal").setup()
+require("lualine").setup()
 require("autoclose").setup({
     keys = {
         ["$"] = { escape = true, close = true, pair = "$$", enabled_filetypes = {"tex"}},
