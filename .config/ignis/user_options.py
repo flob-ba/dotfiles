@@ -24,8 +24,8 @@ class UserOptions(OptionsManager):
         
     class Appearance(OptionsGroup):
         dark_mode: bool = True
-        wallpaper_light: str = "/home/flob/.wallpaper/gruvbox_outset_day.jpg" 
-        wallpaper_dark: str = "/home/flob/.wallpaper/gruvbox_outset_evening.jpg" 
+        wallpaper_light: str = "/home/flob/.wallpaper/outset_day.jpg" 
+        wallpaper_dark: str = "/home/flob/.wallpaper/outset_evening.jpg" 
 
     appearance = Appearance()
 
