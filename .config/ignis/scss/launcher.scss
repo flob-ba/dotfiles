@@ -1,0 +1,40 @@
+.launcher {
+    margin: 0 15px 15px 15px;
+    background-color: $bg;
+    color: $fg;
+    font-family: JetBrainsMonoNL NFM;
+    font-weight: bold;
+    font-size: 12pt;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 0 0 1rem 1rem;
+    min-width: 800px;
+}
+
+.launcher-entry {
+    background-color: $bg1;
+    border-radius: 1rem;
+    padding: 0.2rem 1rem;
+    font-size: 14pt;
+}
+
+.launcher-search-icon {
+    margin-right: 0.5rem;
+}
+
+.launcher-app-item {
+    margin-top: 0.7rem;
+    background-color: $bg1;
+    padding: 0.2rem 1rem;
+    font-size: 14pt;
+    border-radius: 1rem;
+
+    &:focus {
+        background-color: $bg2;
+    }
+}
+
+.launcher-app-item-icon {
+    margin-right: 0.5rem;
+}
+
