@@ -14,9 +14,16 @@
 }
 
 .notification-popup-icon {
-    margin-right: 0.3rem; 
+    margin-right: 1rem; 
 }
 
 .notification-popup-title {
     font-weight: bold;
+}
+
+.notification-popup-dismiss-button {
+    background-color: $redLight;
+    color: $redDark;
+    margin-left: 1rem;
+    border-radius: 0.5rem;
 }

@@ -28,6 +28,14 @@ class NotificationPopup(widgets.Box):
                     ),
                 ],
             ),
+            widgets.CenterBox(
+                vertical = True,
+                center_widget = widgets.Button(
+                    css_classes = ["notification-popup-dismiss-button"],
+                    child = widgets.Icon(icon_name = "window-close-symbolic", pixel_size = 30),
+                    on_click = lambda _: notification.dismiss(),
+                ),
+            ),
         ]
         notification.connect("dismissed", lambda _: self.__on_dismissed())
 
