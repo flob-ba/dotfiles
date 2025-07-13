@@ -1,0 +1,48 @@
+.bar {
+    font-family: JetBrainsMonoNL NFM;
+    font-weight: bold;
+    font-size: 12pt;
+    background-color: $bg;
+    color: $fg;
+    margin-right: 20px;
+    box-shadow: rgba(black, 0.5) 10px 0px 10px;
+    min-width: 35px;
+    padding: 15px 2px 15px 2px;
+}
+
+.bar-active-window-title-char {
+  margin-top: -12px;
+  transform: rotate(90deg)
+}
+
+.bar-status-pill {
+    background-color: $bg1;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.bar-status-pill-item {
+  margin: 0.3rem 0 0.3rem 0;
+}
+
+.bar-workspace-pill {
+   background-color: $bg1; 
+   padding: 0.3rem;
+   border-radius: 1rem;
+   margin-top: 0.3rem;
+}
+
+.bar-workspace {
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    border-radius: 1rem;
+    &.visible {
+        background-color: $yellow;
+        color: $bg;
+    }
+    &.active {
+        background-color: $orange;
+        color: $bg;
+    }
+}
