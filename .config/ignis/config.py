@@ -25,12 +25,11 @@ css_mananger.apply_css(
     )
 )
 
-WallpaperService.get_default()
 if user_options.appearance.dark_mode:
-    options.wallpaper.set_wallpaper_path(user_options.appearance.wallpaper_dark)
+    utils.exec_sh(f"swww img {user_options.appearance.wallpaper_dark} --transition-type wave --transition-fps 120 --transition-duration 1")
     utils.exec_sh("gsettings set org.gnome.desktop.interface color-scheme prefer-dark")
 else:
-    options.wallpaper.set_wallpaper_path(user_options.appearance.wallpaper_light)
+    utils.exec_sh(f"swww img {user_options.appearance.wallpaper_light} --transition-type wave --transition-fps 120 --transition-duration 1")
     utils.exec_sh("gsettings set org.gnome.desktop.interface color-scheme prefer-light")
 
 for i in range(utils.get_n_monitors()):
