@@ -1,0 +1,22 @@
+.notification-popup-list {
+  margin: 15px;
+}
+
+.notification-popup {
+    font-family: JetBrainsMonoNL NFM;
+    font-size: 12pt;
+    background-color: $bg;
+    color: $fg;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 15px;
+    border-radius: 1rem;
+    padding: 0.3rem;
+}
+
+.notification-popup-icon {
+    margin-right: 0.3rem; 
+}
+
+.notification-popup-title {
+    font-weight: bold;
+}
