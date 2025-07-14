@@ -29,7 +29,8 @@ class Bluetooth(widgets.Icon):
     def __init__(self):
         super().__init__()
         self.css_classes = ["bar-status-pill-item"]
-        self.icon_name = bluetooth.bind("connected_devices", lambda devices: devices[0].icon_name if len(devices) > 0 else "bluetooth-active-symbolic")
+        self.icon_name = "bluetooth-active-symbolic"
+        self.visible = bluetooth.bind("connected_devices", lambda devices: len(devices) > 0)
 
 class Microphone(widgets.Icon):
     def __init__(self):
