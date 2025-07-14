@@ -1,9 +1,11 @@
 from ignis import widgets
 from ignis.services.audio import AudioService
+from ignis.services.bluetooth import BluetoothService
 from ignis.services.network import NetworkService
 from ignis.services.upower import UPowerService
 
 audio = AudioService.get_default()
+bluetooth = BluetoothService.get_default()
 network = NetworkService.get_default()
 upower = UPowerService.get_default()
 
@@ -22,6 +24,12 @@ class Battery(widgets.Box):
                 style = "font-size: 11pt;"
             ),
         ]
+
+class Bluetooth(widgets.Icon):
+    def __init__(self):
+        super().__init__()
+        self.css_classes = ["bar-status-pill-item"]
+        self.icon_name = bluetooth.bind("connected_devices", lambda devices: devices[0].icon_name if len(devices) > 0 else "bluetooth-active-symbolic")
 
 class Microphone(widgets.Icon):
     def __init__(self):
@@ -47,6 +55,7 @@ class StatusPill(widgets.Box):
         self.css_classes = ["bar-status-pill"]
         self.vertical = True
         self.child = [
+            Bluetooth(),
             Microphone(),
             Speaker(),
             Wifi(),
