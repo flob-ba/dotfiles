@@ -32,6 +32,19 @@ class Bluetooth(widgets.Icon):
         self.icon_name = "bluetooth-active-symbolic"
         self.visible = bluetooth.bind("connected_devices", lambda devices: len(devices) > 0)
 
+class Ethernet(widgets.Icon):
+    def __init__(self):
+        super().__init__()
+        self.css_classes = ["bar-status-pill-item"]
+        self.icon_name = network.ethernet.bind("icon_name")
+        print(network.ethernet.icon_name)
+        #self.visible = network.ethernet.bind("is_connected")
+        network.ethernet.connect("notify::is-connected", lambda _, x: self.__update_visibility())
+        network.wifi.connect("notify::is-connected", lambda _, x: self.__update_visibility())
+
+    def __update_visibility(self):
+        self.visible = network.ethernet.is_connected or not network.wifi.is_connected
+
 class Microphone(widgets.Icon):
     def __init__(self):
         super().__init__()
@@ -49,6 +62,7 @@ class Wifi(widgets.Icon):
         super().__init__()
         self.css_classes = ["bar-status-pill-item"]
         self.icon_name = network.wifi.bind("icon_name")
+        self.visible = network.wifi.bind("is_connected")
 
 class StatusPill(widgets.Box):
     def __init__(self):
@@ -59,6 +73,7 @@ class StatusPill(widgets.Box):
             Bluetooth(),
             Microphone(),
             Speaker(),
+            Ethernet(),
             Wifi(),
             Battery(),
         ]
