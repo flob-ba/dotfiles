@@ -23,6 +23,7 @@ class LauncherAppItem(widgets.Button):
                 ),
             ]
         )
+        self.on_click = lambda _: self.launch() 
 
     def launch(self):
         self.app.launch()
