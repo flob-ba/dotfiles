@@ -45,7 +45,7 @@ class Launcher(widgets.RevealerWindow):
 
         revealer = widgets.Revealer(
             transition_type = "slide_down",
-            transition_duration = 100,
+            transition_duration = 250,
             reveal_child = True,
             child = widgets.Box(
                 css_classes = ["launcher"],
