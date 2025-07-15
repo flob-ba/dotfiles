@@ -1,0 +1,27 @@
+.media-popup {
+    font-family: JetBrainsMonoNL NFM;
+    font-size: 12pt;
+    background-color: $bg;
+    color: $fg;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 1) 0px 0px 20px;
+    margin: 15px 20px 20px 20px;
+    border-radius: 5rem;
+    margin-bottom: 1rem;
+}
+
+.media-popup-album-art-container {
+    margin-right: 1rem;
+}
+
+.media-popup-album-art {
+    border-radius: 5rem;
+}
+
+.media-popup-details-container {
+    margin-right: 2rem;
+}
+
+.media-popup-title {
+    font-weight: bold;
+}
