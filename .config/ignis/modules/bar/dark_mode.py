@@ -8,6 +8,7 @@ css_manager = CssManager().get_default()
 class DarkModeToggle(widgets.Button):
     def __init__(self):
         super().__init__()
+        self.css_classes = ["bar-dark-mode-button"]
         self.child = widgets.Icon(icon_name = "weather-clear-night")
         self.on_click = lambda _: self.__on_click()
 

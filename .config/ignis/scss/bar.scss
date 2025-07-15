@@ -11,8 +11,17 @@
 }
 
 .bar-active-window-title-char {
-  margin-top: -12px;
-  transform: rotate(90deg)
+    margin-top: -12px;
+    transform: rotate(90deg)
+}
+
+.bar-dark-mode-button {
+    min-height: 31px;
+    border-radius: 1rem;
+    margin-bottom: 0.2rem;
+    &:hover {
+        background-color: $bg1;
+    }
 }
 
 .bar-status-pill {
