@@ -28,6 +28,8 @@ class UserOptions(OptionsManager):
         wallpaper_dark: str = "/home/flob/.wallpaper/outset_evening.jpg" 
 
     appearance = Appearance()
+    profile_picture_location: str = "/home/flob/dotfiles/profile_picture.jpg"
+    do_not_disturb: bool = False
 
 user_options = UserOptions()
 

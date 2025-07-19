@@ -1,5 +1,6 @@
 from ignis import widgets
 from ignis.services.notifications import NotificationService, Notification
+from user_options import user_options
 
 notifyService = NotificationService.get_default()
 
@@ -58,6 +59,9 @@ class NotificationPopupList(widgets.Window):
         notifyService.connect("new_popup", lambda _, notification: self.__on_new_popup(notification))
 
     def __on_new_popup(self, notification: Notification):
+        if user_options.do_not_disturb:
+            return
+        
         self.visible = True
         self.child.prepend(NotificationPopup(notification, self))
 

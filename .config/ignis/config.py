@@ -3,7 +3,7 @@ from ignis import utils
 from ignis.options import options
 from ignis.css_manager import CssManager, CssInfoPath
 from ignis.services.wallpaper import WallpaperService
-from modules import Bar, Launcher, MediaPopupList, NotificationPopupList, OSD
+from modules import Bar, ControlCenter, Launcher, MediaPopupList, NotificationPopupList, OSD
 from user_options import user_options
 
 css_mananger = CssManager.get_default()
@@ -33,6 +33,7 @@ else:
     utils.exec_sh("gsettings set org.gnome.desktop.interface color-scheme prefer-light")
 
 for i in range(utils.get_n_monitors()):
+    ControlCenter(i)
     Bar(i)
     Launcher(i)
     MediaPopupList(i)

@@ -1,6 +1,5 @@
 from ignis import widgets
 from .clock import Clock
-from .dark_mode import DarkModeToggle
 from .status_pill import StatusPill
 from .window import ActiveWindow
 from .workspaces import Workspaces
@@ -18,7 +17,6 @@ class Bar(widgets.Window):
             start_widget = widgets.CenterBox(center_widget = widgets.Box(
                 vertical = True,
                 child = [
-                    DarkModeToggle(),
                     Workspaces(monitor),
                 ]
             )),

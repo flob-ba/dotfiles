@@ -30,7 +30,7 @@ class Bluetooth(widgets.Icon):
         super().__init__()
         self.css_classes = ["bar-status-pill-item"]
         self.icon_name = "bluetooth-active-symbolic"
-        self.visible = bluetooth.bind("connected_devices", lambda devices: len(devices) > 0)
+        self.visible = bluetooth.bind("powered")
 
 class Ethernet(widgets.Icon):
     def __init__(self):

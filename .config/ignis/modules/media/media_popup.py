@@ -2,6 +2,7 @@ import time
 from ignis import utils, widgets
 from ignis.services.hyprland import HyprlandService
 from ignis.services.mpris import MprisService, MprisPlayer
+from user_options import user_options
 
 hypr = HyprlandService.get_default()
 mpris = MprisService.get_default()
@@ -56,7 +57,7 @@ class MediaPopup(widgets.Revealer):
         player.connect("notify::metadata", lambda player, metadata: self.__on_new_song())
 
     def __on_new_song(self):
-        if hypr.active_window.class_name == self.player.identity:
+        if hypr.active_window.class_name == self.player.identity or user_options.do_not_disturb:
             return
 
         utils.Timeout(ms = 1000, target = lambda: self.set_reveal_child(True))
